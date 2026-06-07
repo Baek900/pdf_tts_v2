@@ -1,0 +1,58 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-950;
+  }
+}
+
+/* Custom Eye-Safe Dark Scrollbars */
+.speech-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.speech-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5); /* slate-900 with alpha */
+  border-radius: 4px;
+}
+
+.speech-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6); /* slate-700 with alpha */
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.speech-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.5); /* amber-500 with alpha */
+}
+
+/* Prevent double outline on standard focus rings */
+input, select {
+  box-shadow: none !important;
+}
+
+/* Smooth active highlight transitions */
+span.inline {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Custom progress scrubber styles */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f59e0b;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Remix: PDF Audio Reader v2",
+  "description": "사용자가 PDF 파일을 업로드하면 문장 단위로 파싱하여 실시간으로 하이라이팅하며 TTS로 읽어주는 오디오 리더 앱입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
